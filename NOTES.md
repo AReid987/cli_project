@@ -2,23 +2,26 @@
 
 What I want my program to do
 
-- Scrap show info from ticketmaster
-https://www.ticketmaster.com/
+- Scrap shows from broadway.com
 
--Scrape reccomended shows for the day
+    -Scrape shows
 
-    -should include show name, show type (boradway, off broadway, etc), genre (eg: comedy), description
+    -should include show name, show type (boradway, off broadway, etc), story, location, duration
 
--Save show info in a array || hash
+    -Save show info in a array || hash
 
 -Create a show class
 
--Input info attributes for each show
+    -Input info attributes for each show
 
--Save all shows in a @@all array
+    -Save all shows in a @@all array
 
--Show a list of recommended shows for the day
+-CLI part
+    
+    -Gives a list of categories to search from (musical, broadway, off-broadway)
 
--Ask user which show they would like to learn more about
+    -User chooses a category, then program outputs lists of shows in category
 
--Output info for passed show
+    -Ask user which show they would like to learn more about
+
+    -Output info for passed show
