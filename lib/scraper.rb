@@ -13,5 +13,9 @@ class Scraper
         #get information about each show and save to hash or array
     end
 
+    def show_info
+        #get attributes for each show
+        #hash can be used to initialize/create new show in Show class
+    end
 
 end

@@ -2,7 +2,7 @@ require_relative './shows/cli.rb'
 
 class Shows
 
-    attr_accessor :name, :location, :duration, :categories, :audience, :story
+    attr_accessor :name, :location, :duration, :categories, :audience, :story, :genre
 
     @@all = []
 
@@ -13,14 +13,24 @@ class Shows
         @categories = shows_hash[:categories]
         @audience = shows_hash[:audience]
         @story = shows_hash[:story]
+        @genre = show_hash[:genre]
         @@all << self
     end
 
-    def self.create_new(show_hash) #create a new show based on inputted hash
+    def self.all
+        @@all
+    end
+    
+    def self.create_new(show_array)
+        show_hash.each {|show| Show.new(show)}
     end
 
-    def self.all #returns self
-        @@all
+    def self.find_by_name(name)
+        @@all.find {|show| show.name == name}
+    end
+      
+    def self.find_or_create_by_name(show)
+        self.find_by_name(show) || self.create_new(show)
     end
 
 end

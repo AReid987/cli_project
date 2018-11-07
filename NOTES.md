@@ -25,3 +25,6 @@ What I want my program to do
     -Ask user which show they would like to learn more about
 
     -Output info for passed show
+
+
+    requirements- 2 levels deep, can add genre class to practice class relations

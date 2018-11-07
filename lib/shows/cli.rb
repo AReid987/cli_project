@@ -5,7 +5,7 @@
 
 class Shows::CLI
 
-    def display_shows
+    def call
         puts "What type of show are you interested in?"
         #puts out list of show types for user to pic from (ex: broadway, off-broadway)
         #user picks show-types and program outputs list of shows
@@ -21,6 +21,10 @@ class Shows::CLI
 
     def list_broadway_musicals
         #list musicals
+    end
+    
+    def list_all_shows
+        #list all shows alphabetically
     end
     
 end
