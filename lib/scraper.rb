@@ -1,20 +1,18 @@
 require 'nokogiri'
-require 'open-uri'
+require 'open_uri_redirections'
 require 'pry'
-
 require 'capybara/poltergeist'
 
-puts session.document.title
-
 class Scraper
-    
-home_url = https://www.broadway.com/shows/tickets/?
-
-    def scrape_home_page(home_url)
-        session = Capybara::Session.new(:poltergeist)
-        session.visit('https://www.broadway.com/shows/tickets/?')
-        shows = session.all('div.card card--hover card--shadow bg--white mtn')
-        shows
+        
+    def self.scrape_home_page
+    home_url = https://broadway.com/shows/tickets/
+    session = Capybara::Session.new(:poltergeist)
+    session.visit(home_url)
+    binding.pry
+    shows_hash = []
+    element = session('div.card card--hover card--shadow bg-white mtndiv.card__body div.media overflow-visible div.media-body h2')
+        show_name = element.text.strip
     end
 
     def scrape_show_page
