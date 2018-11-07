@@ -6,7 +6,7 @@ class Shows
 
     @@all = []
 
-    def initialize(shows_hash) #add all attributes from hash for the given show
+    def initialize(shows_hash)
         @name = shows_hash[:name]
         @location = shows_hash[:location]
         @duration = shows_hash[:duration]
