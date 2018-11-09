@@ -1,15 +1,16 @@
+require 'rubygmes'
 require 'nokogiri'
 require 'open_uri_redirections'
 require 'pry'
 require 'capybara/poltergeist'
 
 class Scraper
+
+    HOME_URL = https://broadway.com/shows/tickets/
         
     def self.scrape_home_page
-    home_url = https://broadway.com/shows/tickets/
     session = Capybara::Session.new(:poltergeist)
-    session.visit(home_url)
-    binding.pry
+    session.visit(HOME_URL)
     shows_hash = []
     element = session('div.card card--hover card--shadow bg-white mtndiv.card__body div.media overflow-visible div.media-body h2')
         show_name = element.text.strip
